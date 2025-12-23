@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>submit page</title>
+</head>
+<body>
+    <div class="success"></div>
+    <script>
+    let params=new URLSearchParams(window.location.search),
+      username=params.get('username'),
+      password=params.get('password'),
+      password2=params.get('confirm_password'),
+      div=document.querySelector('.success')
+    if(password2)
+    div.textContent=`Thanks ${username} for registering`
+    else
+    div.textContent=`welcome ${username}! `
+    </script>
+</body>
+</html>
